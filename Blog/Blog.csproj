@@ -14,7 +14,6 @@
   <ItemGroup>
     <Folder Include="Repositories\" />
     <Folder Include="Mocks\" />
-    <Folder Include="wwwroot\css\" />
     <Folder Include="wwwroot\js\" />
   </ItemGroup>
 
