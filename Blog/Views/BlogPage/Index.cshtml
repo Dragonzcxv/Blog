@@ -1,0 +1,23 @@
+﻿@model BlogPageViewModel
+
+@{
+    ViewBag.Title = "Блог";
+}
+
+<div class="row">
+    @foreach (Post post in Model.Posts)
+    {
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img class="card-img-top" src="img/github.png" />
+                <div class="card-body">
+                    <h5 class="card-title">@post.Title</h5>
+                    <p class="card-text">@post.ShortDescription</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Blog.Interfaces
+namespace Blog.ViewModels
 {
-    interface IPostCategory
+    public class BlogPageViewModel
     {
-        IEnumerable<Category> AllCategories { get; }
+        public IEnumerable<Post> Posts { get; set; }
     }
 }

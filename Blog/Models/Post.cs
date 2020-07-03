@@ -15,8 +15,6 @@ namespace Blog.Models
 
         public string Description { get; set; }
 
-        public bool Published { get; set; }
-
         public DateTime PostedOn { get; set; }
 
         public DateTime? Modified { get; set; }

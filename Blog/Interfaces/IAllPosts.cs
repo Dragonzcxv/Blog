@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Blog.Interfaces
 {
-    interface IAllPosts
+    public interface IAllPosts
     {
         IEnumerable<Post> Posts { get; }
 

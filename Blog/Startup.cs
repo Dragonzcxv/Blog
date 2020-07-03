@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Blog.Interfaces;
+using Blog.Mocks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -16,6 +18,8 @@ namespace Blog
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IAllPosts, MockPosts>();
+            services.AddTransient<IPostCategories, MockCategory>();
             services.AddMvc();
         }
 
@@ -29,14 +33,20 @@ namespace Blog
             }
 
             app.UseStaticFiles();
+           
 
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
+             
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(
+                    name: "blog",
+                    pattern: "{controller=BlogPage}/{action=Index}/{id?}");
             });
         }
     }
