@@ -9,31 +9,30 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-
-            <a class="navbar-brand" href="#">Logo</a>
-
-            <input class="form-control mr-2 nav-item col" type="search" placeholder="Search">
-            <button class="btn btn-outline-primary my-0 mr-2  nav-item " type="submit"><img class="searchIcon" src="img/search.png" /></button>
-
-            <button class="navbar-toggler nav-item " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-
-            <div class="collapse navbar-collapse col-md-3" id="navbarTogglerDemo02">
-                <ul class="navbar-nav mr-auto mt-2 mt-sm-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" asp-controller="BlogPage" asp-action="Index">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-            </div>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">        
+            <form class="form-inline col">
+                <a class="navbar-brand" href="#">Logo</a>
+                <input class="HeaderElement form-control mr-2 nav-item col border-primary bg-secondary mr-2" type="search" placeholder="Search">
+                <button class="HeaderElement btn btn-outline-primary border-0 my-0 nav-item " type="submit">
+                    <img class="align-top" src="img/search.png" />
+                </button>
+                <button class="HeaderElement btn btn-outline-primary border-0 navbar-toggler  border-primary ml-2" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-pressed="false">
+                    <img class="align-top" src="img/menu.png" />
+                </button>
+                <button class="HeaderElement btn btn-outline-primary border-0 my-0 nav-item ml-2 " type="submit">
+                    <img class="align-top" src="img/account.png" />
+                </button>
+                <div class="collapse navbar-collapse col-md-3" id="navbarToggler">
+                    <ul class="navbar-nav mr-auto mt-2 mt-sm-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-primary text-center" asp-controller="Home" asp-action="Index">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-primary text-center" asp-controller="BlogPage" asp-action="Index">Блог</a>
+                        </li>
+                    </ul>
+                </div>
+            </form>
         </nav>
     </header>
 
@@ -41,10 +40,11 @@
         @RenderBody()
     </div>
 
-    <footer class="footer">
+    <footer class="footer mt-3">
         <div class="container">
             <div class="text-center">
                 <span>Coded by <a href="https://github.com/Dragonzcxv">Dragonzcxv</a><img src="img/github.png" href="https://github.com/Dragonzcxv" />, 2020</span>
+                <p>Иконки взяты с <a href="Icons8.ru">Icons8.ru</a></p>
             </div>
         </div>
     </footer>
